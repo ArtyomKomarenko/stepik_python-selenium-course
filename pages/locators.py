@@ -22,10 +22,6 @@ class LoginPageLocators:
     REGISTRATION_BUTTON = (By.CSS_SELECTOR, '#register_form button')
 
 
-class MainPageLocators:
-    pass
-
-
 class ProductPageLocators:
     ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, '.btn-add-to-basket')
     ITEM_NAME = (By.CSS_SELECTOR, '.product_main h1')

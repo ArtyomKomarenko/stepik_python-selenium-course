@@ -21,6 +21,9 @@ class ProductPage(BasePage):
         message_name = self.browser.find_element(*ProductPageLocators.SUCCESS_MESSAGE__ITEM_NAME).text
         assert name == message_name, f'Item name "{message_name}" in message is not equal to item name "{name}"'
 
+    def should_disappear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE)
+
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
             'Success message is presented, but should not be'
